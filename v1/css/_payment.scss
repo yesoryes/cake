@@ -1,0 +1,425 @@
+.payment-table
+{
+   width: 100%;
+    tr 
+    {
+        border-bottom: 1px solid #e2e2e2;
+    }
+    thead 
+    {
+        th 
+        {
+            color: #b1b1b1;
+            font-size: 18px;
+            padding: 30px 0 15px;
+            
+            &:nth-child(1)
+            {
+                width: 26%;
+            }
+             &:nth-child(2)
+            {
+                width: 11%;
+            }
+             &:nth-child(3)
+            {
+                width: 11%;
+            }
+             &:nth-child(4)
+            {
+                width: 15%;
+            }
+             &:nth-child(5)
+            {
+                width: 15%;
+            }
+             &:nth-child(6)
+            {
+                width: 11%;
+            
+            }
+             &:nth-child(7)
+            {
+                width: 11%;
+            
+            }
+        }
+    }
+    tbody 
+    {
+        tr 
+        {
+            td 
+            {
+                padding: 24px 0;
+                color: #87483a;
+                &:nth-child(6),&:nth-child(5)
+                {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+td.cake-cont
+{
+    vertical-align: middle;
+}
+td.cake-cont ul 
+{
+    margin: 0;
+}
+.delivery-table
+{
+    width: 100%;
+    margin: 40px 0;
+    thead 
+    {
+       
+        tr 
+        {
+            border-bottom: 1px solid #e2e2e2;
+            &:first-child
+            {
+                border: none;
+                th 
+                {
+                    color: #b1b1b1;
+                    padding: 0;
+                }
+            }
+            th 
+            {
+                font-size: 18px;
+                color: #454545;
+                 padding: 20px 0 30px;
+                vertical-align: middle;
+                span 
+                {
+                    vertical-align: middle;
+                    img 
+                    {
+                        margin: 0 15px 0;
+                    }
+                    p 
+                    {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                &:nth-child(1)
+                {
+                    width: 20%;
+                }
+                 &:nth-child(2)
+                {
+                    width: 45%;
+                }
+                 &:nth-child(3)
+                {
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+.delivery-table + h3
+{
+    margin:80px 0 30px !important;
+}
+.delivery-buttons
+{
+    a 
+    {
+        span 
+        {
+            img {
+            padding: 0 0 0 7px !important;
+                margin: -4px 0 0;
+            }
+        }
+    }
+}
+.breadcrumb 
+{
+    background: #fff;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    .pay-process
+    {
+        padding: 20px 0;
+        background: url(../images/payment-breadcrumb-icon.png) no-repeat right center;
+        padding-left:15px;
+        border-bottom: 3px solid #f6a695;
+        &:nth-child(2)
+        {
+            padding-bottom: 17px;
+        }
+        &:nth-child(3)
+        {
+            padding-bottom: 14px;
+        }
+        &:last-child
+        {
+            background:none;
+            padding-bottom: 17px;
+            border-bottom-color: #f5f4f0;
+            a {
+               color: #e2e2e2; 
+            }
+            
+        }
+    }
+    a 
+    {
+        padding: 20px 0 20px 25px;
+        font-size: 15px;
+        color: #f8a898;
+        img 
+        {
+            margin: 0 10px 0 0;
+            
+        }
+    }
+}
+/*delivery details*/
+
+.delivery-details
+{ 
+    h3 
+    {
+        color: #454545 !important;
+        font-weight: normal !important;
+    }
+    p {
+        margin: 0 0 15px;
+        &:last-child
+        {
+            margin: 30px 0 15px;
+        }
+        input 
+        {
+            padding: 12px;
+            width: 100%;
+            &:placeholder
+            {
+                opacity: 0.5;
+            }
+        }
+        a {
+               background-image: -moz-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+    background-image: -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+    background-image: -ms-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding: 15px 0;
+            color: #fff;
+            span {
+                margin: 0 10px;
+                &:first-child
+                {
+                    vertical-align: middle;
+                }
+                img 
+                {
+                    vertical-align: baseline;
+                }
+            }
+        }
+    }
+}
+
+.delivery-img
+{
+    img 
+    {
+        transform: translateY(70%);
+    }
+}
+
+.pay-delivery
+{
+    @extend .pay-process;
+    
+    &:nth-child(3), &:nth-child(4)
+    {
+        border-bottom-color: #f5f4f0;
+        background: url(../images/payment-breadcrumb-gray.png) no-repeat right center;
+        a {
+               color: #e2e2e2; 
+            }
+    }
+}
+
+.pay-login
+{
+    @extend .pay-delivery;
+     &:nth-child(2)
+    {
+     border-bottom-color: #f5f4f0;
+        background: url(../images/payment-breadcrumb-gray.png) no-repeat right center;
+        a {
+               color: #e2e2e2; 
+            }
+    }
+}
+.pay-method
+{
+    @extend .pay-process;
+    
+}
+.login-user 
+{
+    h2 
+    {
+        font-size: 20px;
+        color: #454545;
+        margin: 70px 0 20px;
+    }
+    p 
+    {
+        input
+        {
+            width: 100%;
+            padding: 15px 10px;
+            margin:0 0 20px;
+            border: 1px solid #b1b1b1;
+            &:placeholder
+            {
+            opacity: 0.5;
+                color: b1b1b1;
+            }
+        }
+        input[type="submit"]
+        {
+                background-image: -moz-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+    background-image:url(../images/login-icon.png) no-repeat center center, -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+    background-image: -ms-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+                background: url(../images/login-icon.png) no-repeat 36% center,-webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+            color: #fff;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.account-help
+{
+    a 
+    {
+        font-size: 16px;
+        color: #b1b1b1;
+        padding: 0 8px;
+        &:first-child
+        {
+            border-right:1px solid #b1b1b1;
+            padding: 0 10px;
+            
+        }
+    }
+}
+.nav-user
+{
+    transform: translateY(160px);
+    p 
+    {
+        font-size: 20px;
+        color: #b1b1b1;
+    }
+}
+
+.login-non-user
+{
+    h2 
+    {
+       font-size: 20px;
+    color: #454545;
+    margin: 70px 0 20px;
+    }
+    p 
+    {
+        span 
+        {
+            border: 1px solid #b1b1b1;
+                padding:  9px 12px 14px 9px;
+            margin-right: -5px;
+            color: #f58681;
+        }
+    }
+        
+    
+    input[type=number]
+    {
+        padding: 10px;
+        width: 82%;
+        border: 1px solid #b1b1b1;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+    }
+     input[type=button]
+    {
+        background: url(../images/login-mbl-icon.png) no-repeat 7px center, -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+        color: #fff;
+        outline: none;
+        border: none;
+        width: 72%;
+        padding: 15px 15px 15px 20px;
+        text-align: right;
+        margin: 15px 0 0 0;
+    }
+}
+
+@media (min-width:992px) and (max-width:1349px)
+{
+    .login-non-user
+    {
+        input[type=button]
+        {
+            width: 79%;
+        }
+    }
+    .delivery-table thead tr th
+    {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

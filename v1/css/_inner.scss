@@ -1,0 +1,96 @@
+#wrapper {
+    &.wrapper-inner {
+        background: #f7f6ec;
+    }
+}
+.inner-page {
+    h1 {
+        font-size: $size-28;
+        color: #f5828a;
+        margin: 26px 0 16px;
+    }
+}
+.cake-wrap {
+    margin: 0 0 20px;
+}
+.cake-col {
+    height: 300px;
+    background: #fff;
+    position: relative;    
+    overflow: hidden;
+    margin: 0 5px;
+    figure {
+        text-align: center;   
+        margin: 40px 0 30px;
+    }
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: $size-18;
+        font-family: 'Exo2Medium';
+        color: #4a221a;
+    }
+    ul {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        /* fallback */
+        background-color: #1a82f7;
+        background-image: url(images/linear_bg_1.png);
+        background-repeat: repeat-y;
+        @include transition (.5s bottom);
+        /* Safari 4-5, Chrome 1-9 */
+        background: -webkit-gradient(linear, left top, right top, from(#f7a085), to(#f2635d));
+
+        /* Safari 5.1, Chrome 10+ */
+        background: -webkit-linear-gradient(left, #f7a085, #f2635d);
+
+        /* Firefox 3.6+ */
+        background: -moz-linear-gradient(left, #f7a085, #f2635d);
+
+        /* IE 10 */
+        background: -ms-linear-gradient(left, #f7a085, #f2635d);
+
+        /* Opera 11.10+ */
+        background: -o-linear-gradient(left, #f7a085, #f2635d);
+        li {
+            display: inline-block;
+            width: calc(100% / 4);
+            margin-left: -4px;
+            border-right: 1px solid rgba(255, 255, 255, 0.4); 
+            &:last-child {
+                margin-left: -3px;
+                border-right: 0px solid rgba(255, 255, 255, 0.4); 
+            }
+            a {
+                display: block;
+                padding: 20px 0;
+                text-align: center;
+            }
+            &:not(:last-child) {
+                //margin: 0;
+                //border-right: 1px solid rgba(255, 255, 255, 0.4);                  
+            }
+        }
+    }
+    &:hover {
+        ul {
+            bottom: 0;
+        }
+        .smiley-review { 
+            opacity: 0;
+        }
+    }
+}
+.smiley-review {
+    text-align: center;
+    @include transition (.3s opacity);
+    h3 {
+        font-size: $size-18;
+        color: #f5828a;
+        margin-top: 5px;
+    }
+}
