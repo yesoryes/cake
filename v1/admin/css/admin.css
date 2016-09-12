@@ -20,11 +20,48 @@
   src: url("../fonts/OpenSansRegular.eot");
   src: url("../fonts/OpenSansRegular.eot") format("embedded-opentype"), url("../fonts/OpenSansRegular.woff2") format("woff2"), url("../fonts/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular.ttf") format("truetype"), url("../fonts/OpenSansRegular.svg#OpenSansRegular") format("svg"); }
 /*Font size*/
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: 'Exo2Light';
+  background: #fff; }
+
 header {
   overflow: hidden;
   width: 100%;
   height: 40px;
   background: #874737; }
+
+.login-wrap {
+  width: 330px;
+  margin: 70px auto 0; }
+  .login-wrap p {
+    margin: 20px 0;
+    font-family: 'OpenSansRegular';
+    position: relative; }
+    .login-wrap p span {
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .login-wrap p input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #874737;
+      font-size: 1em;
+      color: #874737;
+      padding: 15px;
+      padding-left: 65px; }
+      .login-wrap p input[type="submit"] {
+        background: #874737;
+        color: #fff;
+        font-size: 1.125em;
+        padding: 0;
+        margin: 10px 0; }
+    .login-wrap p a {
+      text-align: center;
+      color: #454545;
+      font-size: 0.75em;
+      display: block; }
 
 footer {
   height: 25px;
