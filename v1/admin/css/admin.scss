@@ -4,6 +4,8 @@
 @import "bootstrap.min.css";
 @import "bootstrap-theme.min.css";
 @import "fonts";
+@import "orderdetails";
+@import "orderlist";
 
     /*Font size*/
 $size-10: 0.625em;
@@ -22,52 +24,41 @@ $size-40: 2.5em;
 $size-45: 2.8125em;
 $size-48: 3em;
 
-//Body
-body {
-    font-size: 16px;
-    overflow-x: hidden;
-    font-family: 'Exo2Light';
-    background: #fff;
-}
+
+input:focus::-webkit-input-placeholder { display: none; }
 header {
     overflow: hidden;
     width: 100%;
     height: 40px;
     background: #874737;
-}
-.login-wrap {
-    width: 330px;
-    margin: 70px auto 0;
-    p {
-        margin: 20px 0;
-        font-family: 'OpenSansRegular';
-        position: relative;
-        span {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        input {
-            width: 100%;
-            height: 40px;
-            border: 1px solid #874737;
-            font-size: $size-16;
-            color: #874737;
-            padding: 15px;
-            padding-left: 65px;
-            &[type="submit"] {
-                background: #874737;
-                color: #fff;
-                font-size: $size-18;
-                padding: 0;
-                margin: 10px 0;
+    ul 
+    {
+        float: right;
+        margin: 0 24px 0 0;
+        li 
+        {
+            float: left;
+            border: 1px solid #996255;
+            border-top: none;
+            border-bottom: none;
+            a
+            {
+                padding: 10px 15px;
+            }
+            &:first-child
+            {
+            a 
+            { 
+               
+               &:first-child 
+                {
+                    img 
+                    {
+                        padding: 11px 0;
+                    }
+                }
             }
         }
-        a {
-            text-align: center;
-            color: #454545;
-            font-size: $size-12;
-            display: block;
         }
     }
 }
@@ -80,4 +71,137 @@ footer {
     font-size: $size-11;
     vertical-align: middle;
     padding: 6px 0;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
 }
+.admin-logo 
+{
+    a 
+    {
+        img 
+        {
+            padding: 9px 0;
+        }
+    }
+}
+.admin-logo > a
+{
+    margin: 0 0 0 104px;
+}
+.login-wrap
+{
+    margin: 90px 0 0;
+    text-align: center;
+     a 
+    {
+        color: #454545;
+        font-size: 12px;
+        font-family: 'OpenSansRegular';
+        &:hover
+        {
+            text-decoration: underline !important;
+        }
+    }
+    p 
+    {
+        overflow: hidden;
+        width: 100%;
+        &:nth-child(3)
+        { 
+            span 
+            {
+                visibility: hidden;
+            }
+            input
+            {
+               width: 22.39%;
+                background: #874737;
+                color: #fff;
+            }
+        }
+        span 
+        {
+            border: 1px solid #874737;
+            margin-right: -5px;
+            display: inline-block;
+            height: 100%;
+            padding: 10px 14px 10px 12px;
+        }
+        &:nth-child(2)
+        {
+            span 
+            {
+               padding:  11px 16px 10px 13px;
+            }
+        }
+        input 
+        {
+            padding: 12px 25px;
+            color: #874737;
+            font-size:$size-16;
+            font-family: 'OpenSansRegular';
+            border: 1px solid #874737;
+            display: inline-block;
+            width: 20%;
+            
+
+        }
+        input::-webkit-input-placeholder 
+        {
+             color: rgba(135,71,55,0.4);
+        }
+    }
+}
+
+input:focus::-webkit-input-placeholder { transition: 0.3s all ease;
+opacity: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
