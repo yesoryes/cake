@@ -1,6 +1,7 @@
 //Javascript 
 $(document).ready(function(){
 	//Navigation
+	 $('.profile-bg').height($(window).height() - 260);
 	$('#nav-icon3').click(function(){
 		$(this).toggleClass('open');
 	});

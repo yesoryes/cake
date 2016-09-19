@@ -17,6 +17,7 @@
 <style type="text/css">
 body {
   overflow: hidden;
+  
 }
 </style>
 
@@ -31,7 +32,7 @@ body {
       <input type="submit" class="btn-search" name="">
     </div>
     <div class="pull-right header-btn">
-      <p class="login-btn"><a href=""></a></p>
+      <p class="login-btn"><a id="open-pop-up-1" href="#pop-up-1"></a></p>
       <p class="cart-btn"><a href=""></a></p>
     </div>
   </header>
@@ -103,6 +104,47 @@ body {
 
   </div>
 </div>
+<div id="pop-up-1" class="pop-up-display-content">
+   <div class="popup-content"> 
+       <div class="popup-top">
+        <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
+    		<div class="login-user pop-login-user">
+                    <h2>Sign in to Your Account</h2>
+                    <p><input type="text" placeholder="User Name"></p>
+                    <p><input type="password" placeholder="Password"></p>
+                    <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
+                    <p class="account-help text-center">
+                    <a href="#">Forget Password</a>
+                    <a id="open-pop-up-2" href="#pop-up-2" class="log-cls">Create New Account</a>
+                    </p>
+            </div>
+  </div>
+     </div>
+  </div>
+ </div>
+ <div id="pop-up-2" class="pop-up-display-content">
+   <div class="popup-content"> 
+       <div class="popup-top">
+        <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
+    		<div class="login-user pop-login-user">
+                    <h2>Create Your Account</h2>
+                    <p><input type="text" placeholder="Name"></p>
+                    <p><input type="email" placeholder="E-Mail Id"></p>
+                    <p><input type="number" placeholder="Mobile Number"></p>
+                    <p><input type="password" placeholder="Password"></p>
+                    <p><input type="password" placeholder="Re-Enter Password"></p>
+                    <div><input type="checkbox" class="radio-pop radio-custom" id="radio-popup"><label for="radio-popup" class="radio-custom-label">I agree Terms and Conditions</label></div>
+                    <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
+                    <p class="account-help text-center">
+                    <a href="javascript:;">Already have an Account?</a>
+                    <a href="#" class="sign-cls">Sign In</a>
+                    </p>
+            </div>
+  </div>
+     </div>
+  </div>
+ </div>
+ 
 <script src="js/jquery-1.12.3.min.js"></script> 
 <!--Bootstrap Scripts--> 
 <script src="js/bootstrap.min.js"></script> 
@@ -110,8 +152,10 @@ body {
 <!--script src="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/jquery.royalslider.min.js"></script--> 
 <script src="js/slick.js"></script>
 <script src="js/script.js"></script> 
+<script src="js/popupwindow.js"></script>
 <script>
 $(document).ready(function(e) {
+
   $('#showcase').slick({
       vertical: true,
       verticalSwiping: true,
@@ -188,8 +232,23 @@ $(document).ready(function(e) {
       })
 
   });
-
+ 
 });
+</script>
+<script>
+ $('#open-pop-up-1').click(function(e) {
+        e.preventDefault();
+        $('#pop-up-1').popUpWindow({action: "open"});
+    });
+	$('#open-pop-up-2').click(function(e) {
+        e.preventDefault();
+        $('#pop-up-2').popUpWindow({action: "open"});
+    });
+	$('.sign-cls').click(function(){
+		$('#pop-up-2').parent().parent().parent().css('display', 'none');
+		$('#pop-up-2').parent().parent().parent().prev().css('display', 'none');
+    });
+	
 </script>
 </body>
 </html>
