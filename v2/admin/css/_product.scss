@@ -1,0 +1,113 @@
+.product-history-table {
+    @extend.table-client-list;
+    thead {
+        th {
+            &:nth-child(1) {
+                width: 15%;
+            }
+            &:nth-child(2) {
+                width: 30%;
+            }
+            &:nth-child(3) {
+                width: 20%;
+            }
+            &:nth-child(4) {
+                width: 20%;
+            }
+            &:nth-child(5) {
+                width: 15%;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+                &:nth-child(1) {
+                    font-family: 'open_sanslight';
+                }
+                &:nth-child(2) {
+                    p {
+                        font-family: 'OpenSansRegular';
+                        margin: 20px 0 0;
+                    }
+                }
+                &:nth-child(4) {
+                    font-size: 20px !important;
+                    color: #454545;
+                }
+                .list-btn {
+                    &.btn-see {
+                        padding: 5px 35px 5px 15px;
+                        background: #874737 url(../images/ico_search.png) no-repeat;
+                        background-position: right 10px center
+                    }
+                }
+            }
+        }
+    }
+}
+.product-individual-table {
+    @extend.product-history-table;
+    thead {
+        th {
+            &:nth-child(1) {
+                width: 15%;
+            }
+            &:nth-child(2) {
+                width: 40%;
+            }
+            &:nth-child(3) {
+                width: 15%;
+            }
+            &:nth-child(4) {
+                width: 20%;
+            }
+            &:nth-child(5) {
+                width: 10%;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+                font-family: 'open_sanslight';
+                &:nth-child(1) {
+                    font-family: 'open_sanslight';
+                }
+                &:nth-child(2) {
+                    font-family: 'OpenSansRegular';
+                }
+                &:nth-child(3) {
+                    font-family: 'open_sanslight';
+                }
+                &:nth-child(4) {
+                    font-family: 'open_sanslight';
+                }
+                .list-btn {
+                    &.btn-see {
+                        padding: 5px 35px 5px 15px;
+                        background: #874737 url(../images/ico_search.png) no-repeat;
+                        background-position: right 10px center
+                    }
+                }
+            }
+        }
+    }
+}
+.product-text-wrap {
+    overflow: hidden;
+    display: inline-block;
+    div {
+        margin: 0 0 0 12px;
+    }
+    h1 {
+        font-size: 32px;
+        font-family: 'open_sanslight';
+    }
+    h5 {
+        font-size: 16px;
+        font-family: 'OpenSansRegular';
+    }
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cake | Payment </title>
+<title>Cake | Payment</title>
 
 <!--Bootstrap Styles-->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,46 +49,80 @@
   <div class="container profile-page payment-page padding-zero">
     <div class="row">
     		<div class="breadcrumb col-md-24 col-lg-24">
-            	<div class="col-md-6 col-lg-6 pay-login">
-                	<a href="#"><img src="images/login-payment-icon.png">LOGIN</a>
+            	<div class="col-md-6 col-lg-6 pay-process">
+                	<a href="payment_login.html"><img src="images/login-payment-icon.png">LOGIN</a>
                 </div>
-                <div class="col-md-6 col-lg-6 pay-login">
-                	<a href="#"><img src="images/delivery-gray.png">DELIVERY ADDRESS</a>
+                <div class="col-md-6 col-lg-6 pay-process">
+                	<a href="payment_delivery_address.html"><img src="images/delivery-payment-icon.png">DELIVERY ADDRESS</a>
                 </div>
-                <div class="col-md-6 col-lg-6 pay-login">
-               	 <a href="#"><img src="images/summary-gray.png">ORDER SUMMARY</a>
+                <div class="col-md-6 col-lg-6 pay-process">
+               	 <a href="#"><img src="images/summary-payment-icon.png">ORDER SUMMARY</a>
                 </div>
-                <div class="col-md-6 col-lg-6 pay-login">
+                <div class="col-md-6 col-lg-6 pay-process">
                 	<a href="#"><img src="images/payment-method-gray.png">PAYMENT METHOD</a>
                 </div>
             </div>
-     			<div class="item col-md-24 col-lg-24 profile-bg">
-                	<div class="col-md-9 col-lg-7 login-user">
-                    <h2>Sign in to Your Account</h2>
-                    <p><input type="text" placeholder="User Name"></p>
-                    <p><input type="password" placeholder="Password"></p>
-                    <p><a href="payment_delivery_address.html"><input type="submit" value="LOG IN"></a></p>
-                    <p class="account-help text-center">
-                    <a href="#">Forget Password</a>
-                    <a href="#">Create New Account</a>
-                    </p>
-                    </div>
-                    <div class="col-md-6 col-lg-6 nav-user text-center">
-                    <img src="images/right-arrow-login.png">
-                    <p>For non-Account Order</p>
-                    </div>
-                    <div class=" col-md-9 col-lg-11 login-non-user">
-                        <div class=" col-md-24 col-md-offset-0 col-lg-15 col-lg-offset-5">
-                        <h2>Enter Your Mobile Number</h2>
-                        <p>
-                        <span>+91</span>
-                        <input type="number"></p>
-                        <p>
-                        <input type="button" value="SEND VERIFICATION CODE">
-                        </p>
-                        </div>
-                    </div>
-                </div>
+     	<div class="items profile-bg col-lg-24">
+        	<table class="payment-table">
+            	<thead>
+                <tr>
+                	<th>Order Details</th>
+                    <th>Rate</th>
+                    <th>Flavours</th>
+                    <th class="text-center">Weight</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Total</th>
+                    <th class="text-center">Control</th>
+                    </tr>
+                </thead>
+            	<tbody class="body-items">
+                <tr>
+                <td class="order-details">
+                <img src="images/items-cake1.jpg">
+                <h2>
+                	<p>Black Forest</p>
+                            </h2>
+            </td>
+                <td> &#x20B9; 2750 </td>
+                <td>Non-Veg</td>
+                <td class="cake-cont text-center">
+                <ul>
+                 	<li class="counter-minus" unselectable="on"></li>
+                    <li class="counter-value"><input type="text" value="0" class="qty" disabled=""></li>
+                    <li class="counter-plus" unselectable="on"></li>	
+                 </ul>
+                 </td>
+                <td class="cake-cont text-center">
+                <ul>
+                 	<li class="counter-minus" unselectable="on"></li>
+                    <li class="counter-value"><input type="text" value="0" class="qty" disabled=""></li>
+                    <li class="counter-plus" unselectable="on"></li>	
+                 </ul>
+                 </td>
+                <td class="text-center"> &#x20B9; 28790</td>
+                <td class="text-center"><img src="images/remove-icon.png" class="delete-item"></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="delivery-table">
+            <thead>
+            <tr>
+            	<th>Delivery Address</th>
+            </tr>
+            <tr>
+            <th><p>RAJESH.E<br>9876543210</p></th>
+            <th><span><img src="images/delivery-nav-icon.png"><p>91, 6th cross street, Velachery , Near HDFC Bank <br>
+Chennai-629001.</p></span></th>
+            <th><span><img src="images/delivery-icon-footer.png">Delivery In 2 hours When Order Accepted</span></th>
+            </tr>
+            </thead>
+            </table>
+            <h3 class="text-right"><span>Total Amount</span>  &#x20B9;  10,750</h3>
+            <div class="text-right delivery-buttons">
+                <a href="#">Cancel</a>
+                <a href="payment_checkin.html">PROCEED PAYMENT<span><img src="images/proceed-button-icon.png"></span></a>
+            </div>
+        </div>
     </div>
   </div>
 

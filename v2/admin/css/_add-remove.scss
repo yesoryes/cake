@@ -1,0 +1,52 @@
+.add-remove-table {
+    @extend.table-client-list;
+    thead {
+        th {
+            &:nth-child(1) {
+                width: 10%;
+            }
+            &:nth-child(2) {
+                width: 25%;
+            }
+            &:nth-child(3) {
+                width: 10%;
+            }
+            &:nth-child(4) {
+                width: 30%;
+            }
+            &:nth-child(5) {
+                width: 15%;
+            }
+            &:nth-child(6) {
+                width: 10%;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+                &:nth-child(1) {
+                    font-family: 'open_sanslight';
+                }
+                &:nth-child(2) {
+                    p {
+                        font-family: 'OpenSansRegular';
+                        margin: 20px 0 0;
+                    }
+                }
+                &:nth-child(4) {
+                    font-size: 20px !important;
+                    color: #454545;
+                }
+                .list-btn {
+                    &.btn-see {
+                        padding: 5px 35px 5px 15px;
+                        background: #874737 url(../images/ico_search.png) no-repeat;
+                        background-position: right 10px center
+                    }
+                }
+            }
+        }
+    }
+}

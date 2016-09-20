@@ -1,0 +1,124 @@
+
+.acceptance-data-list {
+    thead {
+        tr {
+            th {
+                &:nth-child(1) {
+                    width: 16%;
+                }
+                 &:nth-child(2) {
+                    width: 25%;
+                }
+                &:nth-child(3) {
+                    width: 14%;
+                }
+                &:nth-child(4) {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                color: #454545;
+                &:nth-child(2) {
+                    div {
+                        padding: 0 0 0 10px;
+                        overflow: hidden;
+                    }
+                }
+                &:nth-child(4) {
+                    font-size: 15px;
+                    font-family: 'open_sanslight';
+                }
+                &:nth-child(5) {
+                    .list-btn {
+                        color: #fff;
+                        font-size: 15px;
+                        font-family: 'OpenSansRegular';
+                        outline: none;
+                        border: none;
+                        padding: 5px 35px 5px 15px;
+                        background: #874737 url(../images/ico_view_full.png) no-repeat;
+                        background-position: right 10px center
+                    }
+                }
+                img{ 
+                    border: 1px solid #f5f5f5;
+                }
+                h3 {
+                    font-size: 20px;
+                    font-family: 'OpenSansRegular';
+                    margin: 10px 0 0px;
+                }
+                h4 {
+                    font-size: 16px;
+                    font-family: 'OpenSansRegular';
+                }
+                h5 {
+                    font-size: 16px;
+                    font-family: 'open_sanslight';
+                    margin: 7px 0 0;
+                }
+            }
+        }
+    }
+}
+.cake-accept-detail {
+    padding: 25px 0;
+    overflow: hidden;
+    h2 {
+        font-size: 22px;
+        color: #454545;
+        margin: 0 0 7px;
+    }
+    h5 {
+        font-size: 16px;
+        font-family: 'open_sanslight';
+    }
+    h3 {
+        font-size: 20px;
+        font-family: 'OpenSansRegular';
+        margin: 0 0 10px;
+    }
+    p {
+        font-size: 16px;
+        font-family: 'open_sanslight';
+    }
+}
+.rating-wrap {
+    margin: 40px 0; 
+}
+.accept-btn-group {
+    margin: 50px 0 0;
+    p {
+        font-size: 18px;
+        float: left;
+        a {
+            color: #fff;
+            display: block;
+            padding: 10px 34px 10px 10px;
+        }
+        &.btn-accept {
+            margin: 0 25px 0 0;
+            a {
+                background: #884838 url(../images/ico_tick.png) no-repeat;
+                background-position: right 10px center;
+            }
+        }
+        &.btn-accept-delete {
+            a {
+                background: #454545 url(../images/ico_remove.png) no-repeat;
+                background-position: right 10px center;;
+            }
+        }
+    }
+}
+.accept-detail-right {
+    border-right: 1px solid #e1e1e1;
+    padding: 50px 0;
+}
+.acceptance-detail-wrap {
+    margin: 60px 0;
+}
