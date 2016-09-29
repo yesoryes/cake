@@ -1,0 +1,33 @@
+.my-orders {
+    thead {
+        th {
+            &:nth-child(1) {
+                width: 20%;
+            }
+             &:nth-child(6) {
+                width: 15%;
+            }
+        }
+    }
+    tbody {
+        td {
+             &:nth-child(6) {
+                 span {
+                     width: 100%;
+                     display: block;
+                     font-size: 14px;
+                     background-image: -moz-linear-gradient( 0deg, rgb(247,160,133) 0%, rgb(245,130,113) 47%, rgb(242,99,93) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(247,160,133) 0%, rgb(245,130,113) 47%, rgb(242,99,93) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(247,160,133) 0%, rgb(245,130,113) 47%, rgb(242,99,93) 100%);
+                     a {
+                         display: block;
+                         color: #fff;
+                         padding: 10px;
+                         text-transform: uppercase;
+                         background: url(../images/ico_search_small.png) no-repeat 20px center;
+                     }
+                 }
+            }
+        }
+    }
+}

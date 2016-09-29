@@ -1103,7 +1103,8 @@ button, input, textarea {
       width: 10%; }
   .items-table tbody tr td {
     padding: 24px 0;
-    color: #87483a; }
+    color: #87483a;
+    vertical-align: middle; }
     .items-table tbody tr td:nth-child(6), .items-table tbody tr td:nth-child(5) {
       cursor: pointer; }
 
@@ -1857,6 +1858,24 @@ td.cake-cont ul {
     font-size: 23px;
     background-size: 34px;
     padding: 2px 0 7px 43px; } }
+.my-orders thead th:nth-child(1) {
+  width: 20%; }
+.my-orders thead th:nth-child(6) {
+  width: 15%; }
+.my-orders tbody td:nth-child(6) span {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  background-image: -moz-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+  background-image: -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+  background-image: -ms-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%); }
+  .my-orders tbody td:nth-child(6) span a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    background: url(../images/ico_search_small.png) no-repeat 20px center; }
+
 @media only screen and (max-width: 1250px) {
   .search-btn {
     margin: 0 150px 0 auto; }
