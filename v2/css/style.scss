@@ -1,5 +1,5 @@
 /*Style.scss*/
-    /*Include*/
+/*Include*/
 @import "reset.css";
 @import "bootstrap.min.css";
 @import "bootstrap-theme.min.css";
@@ -59,8 +59,7 @@
 }
 
 @mixin placeholder-style {
-  
-  color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.8);
 }
 
     /*Color*/
@@ -82,6 +81,11 @@ $size-30: 1.875em;
 $size-40: 2.5em;
 $size-45: 2.8125em;
 $size-48: 3em;
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
 
 //Body
 body {
@@ -559,6 +563,9 @@ aside {
 }
 .cake-heading {
     color: rgba(102, 62, 41, 0.9);
+}
+.btn-close-details {
+    position: fixed !important;
 }
 
 @import "inner";

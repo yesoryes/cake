@@ -25,6 +25,10 @@
 /* translate */
 /*Color*/
 /*Font size*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-size: 16px;
   overflow-x: hidden;
@@ -475,6 +479,9 @@ aside {
 .cake-heading {
   color: rgba(102, 62, 41, 0.9); }
 
+.btn-close-details {
+  position: fixed !important; }
+
 #wrapper.wrapper-inner {
   background: #f7f6ec; }
 
@@ -563,6 +570,22 @@ aside {
   float: left;
   overflow: hidden; }
 
+.ico-share-wrap {
+  overflow: hidden;
+  padding: 20px; }
+  .ico-share-wrap li {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 20px; }
+    .ico-share-wrap li a {
+      display: block;
+      height: 24px; }
+      .ico-share-wrap li a.btn-ico-whislist {
+        background: url(../images/ico_detail_whislist.png) no-repeat center; }
+      .ico-share-wrap li a.btn-ico-share {
+        background: url(../images/ico_detail_share.png) no-repeat center; }
+
 .btn-group-detail {
   width: 300px;
   margin: 0 auto; }
@@ -601,7 +624,7 @@ aside {
 .cake-view-cont {
   height: 455px;
   position: relative;
-  top: 25%; }
+  top: 23%; }
 
 .cake-text-wrap {
   width: 60%;
@@ -814,6 +837,9 @@ button, input, textarea {
 
 .padding-zero {
   padding: 0; }
+
+.postion-fixed {
+  position: fixed; }
 
 .absolute-center {
   position: absolute;
@@ -1032,16 +1058,17 @@ button, input, textarea {
   15% {
     box-shadow: 0 0 0 0 #45c2c5, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #45c2c5, 0 0 0 0 rgba(0, 0, 0, 0.08); }
   100% {
-    box-shadow: 0 0 40px 300px rgba(0, 0, 0, 0.1), 0 0 10px 310px transparent, 0 0 30px 320px rgba(0, 0, 0, 0.1), 0 0 5px 330px transparent; } }
+    box-shadow: 0 0 40px 300px rgba(0, 0, 0, 0.1), 0 0 10px 310px transparent, 0 0 30px 320px rgba(0, 0, 0, 0.1); } }
 .profile-page {
-  margin-top: 40px; }
+  margin: 40px auto; }
   .profile-page h1 {
     color: #454545;
-    padding: 38px 0 25px;
-    font-size: 32px; }
+    padding: 0 0 25px;
+    font-size: 32px;
+    line-height: 24px; }
   .profile-page .profile-bg {
     background: #fff;
-    padding: 0px 40px 40px; }
+    padding: 40px; }
     .profile-page .profile-bg h3 {
       color: #87483a;
       font-size: 18px;
@@ -1068,6 +1095,11 @@ button, input, textarea {
         .profile-page .text-right a:nth-child(2) span img {
           padding: 0 15px 0 0; }
 
+.btn-shoping-order {
+  overflow: hidden; }
+  .btn-shoping-order a {
+    display: inline-block; }
+
 .order-details h2 {
   display: inline-block;
   font-size: 18px;
@@ -1088,7 +1120,8 @@ button, input, textarea {
   .items-table thead th {
     color: #b1b1b1;
     font-size: 18px;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    font-family: 'Exo2Light'; }
     .items-table thead th:nth-child(1) {
       width: 25%; }
     .items-table thead th:nth-child(2) {
@@ -1103,8 +1136,7 @@ button, input, textarea {
       width: 10%; }
   .items-table tbody tr td {
     padding: 24px 0;
-    color: #87483a;
-    vertical-align: middle; }
+    color: #87483a; }
     .items-table tbody tr td:nth-child(6), .items-table tbody tr td:nth-child(5) {
       cursor: pointer; }
 
@@ -1293,7 +1325,7 @@ td.cake-cont ul {
 .login-user h2 {
   font-size: 20px;
   color: #454545;
-  margin: 70px 0 20px; }
+  margin: 0 0 20px; }
 .login-user p {
   overflow: hidden; }
   .login-user p input {
@@ -1328,6 +1360,9 @@ td.cake-cont ul {
     .login-user p .loginhover:hover:before {
       transform: translateX(220px); }
 
+.login-user.pop-login-user p input {
+  width: 330px; }
+
 .account-help a {
   font-size: 16px;
   color: #b1b1b1;
@@ -1339,57 +1374,63 @@ td.cake-cont ul {
     padding: 0 10px; }
 
 .nav-user {
-  transform: translateY(160px); }
+  transform: translateY(80px); }
   .nav-user p {
     font-size: 20px;
     color: #b1b1b1; }
 
-.login-non-user h2 {
-  font-size: 20px;
-  color: #454545;
-  margin: 70px 0 20px; }
-.login-non-user p {
-  overflow: hidden; }
-  .login-non-user p span {
-    border: 1px solid #b1b1b1;
-    padding: 9px 12px 14px 9px;
-    margin-right: -5px;
-    color: #f58681; }
-  .login-non-user p .veri-hover {
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s all ease; }
-    .login-non-user p .veri-hover input {
+.login-non-user {
+  opacity: 0.5;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all; }
+  .login-non-user h2 {
+    font-size: 20px;
+    color: #454545;
+    margin: 0 0 25px; }
+  .login-non-user p {
+    overflow: hidden; }
+    .login-non-user p span {
+      border: 1px solid #b1b1b1;
+      padding: 14px 12px 19px 9px;
+      margin-right: -5px;
+      color: #f58681; }
+    .login-non-user p .veri-hover {
+      position: relative;
       overflow: hidden;
       transition: 0.3s all ease; }
-    .login-non-user p .veri-hover:before {
-      content: 'SEND VERIFICATION CODE';
-      transition: 0.3s all ease;
-      position: absolute;
-      top: 8px;
-      left: 21%;
-      color: #fff; }
-    .login-non-user p .veri-hover:hover input {
-      background: url(../images/login-mbl-icon.png) no-repeat center center, -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%); }
-    .login-non-user p .veri-hover:hover:before {
-      transform: translateX(200px); }
-.login-non-user input[type=number] {
-  padding: 10px;
-  width: 82%;
-  border: 1px solid #b1b1b1; }
-.login-non-user input[type=number]::-webkit-inner-spin-button,
-.login-non-user input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-.login-non-user input[type=button] {
-  background: url(../images/login-mbl-icon.png) no-repeat 7px center, -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
-  color: #fff;
-  outline: none;
-  border: none;
-  width: 72%;
-  padding: 15px 15px 15px 20px;
-  text-align: right;
-  margin: 15px 0 0 0; }
+      .login-non-user p .veri-hover input {
+        overflow: hidden;
+        transition: 0.3s all ease; }
+      .login-non-user p .veri-hover:before {
+        content: 'SEND VERIFICATION CODE';
+        transition: 0.3s all ease;
+        position: absolute;
+        top: 8px;
+        left: 21%;
+        color: #fff; }
+      .login-non-user p .veri-hover:hover input {
+        background: url(../images/login-mbl-icon.png) no-repeat center center, -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%); }
+      .login-non-user p .veri-hover:hover:before {
+        transform: translateX(150%); }
+  .login-non-user input[type=number] {
+    padding: 15px;
+    width: 82%;
+    border: 1px solid #b1b1b1; }
+  .login-non-user input[type=number]::-webkit-inner-spin-button,
+  .login-non-user input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .login-non-user input[type=button] {
+    background: url(../images/login-mbl-icon.png) no-repeat 7px center, -webkit-linear-gradient(0deg, #f7a085 0%, #f58271 47%, #f2635d 100%);
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 83%;
+    padding: 15px 15px 15px 20px;
+    text-align: right;
+    margin: 15px 0 0 0; }
 
 .pay-options li {
   margin: 20px 35px 35px 0;
@@ -1474,7 +1515,7 @@ td.cake-cont ul {
 
 .cod-details {
   text-align: right;
-  padding: 0  100px 0 0; }
+  padding: 0 100px 0 0; }
   .cod-details p input {
     width: 67%; }
 
@@ -1554,66 +1595,6 @@ td.cake-cont ul {
   outline: none;
   /* focus style */ }
 
-@media (min-width: 992px) and (max-width: 1349px) {
-  .login-non-user input[type=button] {
-    width: 79%; }
-
-  .delivery-table thead tr th {
-    font-size: 13px; }
-
-  .pay-options li {
-    margin-right: 15px; }
-    .pay-options li a {
-      font-size: 14px; }
-
-  .radio-custom-label img {
-    margin: 0; }
-
-  .profile-page .text-right a:nth-child(2) {
-    white-space: nowrap; } }
-@media (min-width: 992px) and (max-width: 1100px) {
-  .pay-options li {
-    margin-right: 10px; }
-    .pay-options li a {
-      font-size: 13px; }
-
-  .radio-custom-label img {
-    margin: 0 0 0 -4px; }
-
-  .radio-custom + .radio-custom-label:before {
-    margin-right: 7px; }
-
-  .radio-cls:before {
-    margin-right: 8px !important; }
-
-  .debit-banking, .credit-banking {
-    padding: 0; }
-    .debit-banking p input, .credit-banking p input {
-      font-size: 14px; }
-
-  .checkout-details p input {
-    width: 60%; }
-
-  .checkout-details p .cvv {
-    width: 25%;
-    margin-left: 8px; }
-
-  .checkout-details p .exp-date {
-    width: 32%; }
-
-  .cod-details {
-    padding: 0; }
-    .cod-details p input {
-      width: 60%; }
-
-  .cod-buttons a {
-    width: 60%; }
-
-  .otp-buttons a:last-child {
-    width: 60%; } }
-@media (min-width: 992px) and (max-width: 1200px) {
-  .profile-page .text-right a:nth-child(1) {
-    margin: 0 15px 0 0; } }
 /*LOG IN-POPUP*/
 .pop-up-background {
   background: rgba(0, 0, 0, 0.5);
@@ -1628,20 +1609,22 @@ td.cake-cont ul {
 
 .pop-up {
   visibility: visible !important;
-  left: 57%;
-  margin-left: -400px;
-  max-width: 800px;
+  left: 50%;
   position: absolute;
   top: 40%;
-  width: 28%;
-  z-index: 100; }
+  z-index: 100;
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
 
 .login-pop {
   background: #fff;
   width: 100%; }
 
 .pop-login-user {
-  padding: 0 60px 60px; }
+  padding: 50px; }
   .pop-login-user .account-help {
     margin-top: 20px; }
   .pop-login-user input[type=number] {
@@ -1876,9 +1859,100 @@ td.cake-cont ul {
     text-transform: uppercase;
     background: url(../images/ico_search_small.png) no-repeat 20px center; }
 
+.pop-up-display-content {
+  display: none; }
+
+.track-order {
+  background: #fff;
+  padding: 60px; }
+  .track-order .tracking-step-detail {
+    width: 750px;
+    min-height: 1px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Exo2Medium'; }
+    .track-order .tracking-step-detail:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: -2px;
+      top: 10px;
+      height: 1px;
+      background: #e2e2e2;
+      z-index: 0; }
+    .track-order .tracking-step-detail li {
+      display: inline-block;
+      width: calc(100% / 4);
+      background-image: url(../images/ico_nor_track.png);
+      background-position: 0 3px;
+      background-repeat: no-repeat;
+      margin: 0 -2px;
+      text-align: center;
+      padding: 25px 0 0;
+      font-size: 0.875em;
+      color: #b1b1b1;
+      position: relative;
+      z-index: 1000;
+      font-family: 'Exo2Light' !important; }
+      .track-order .tracking-step-detail li.active {
+        background-image: url(../images/ico_active_track.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        color: #454545; }
+      .track-order .tracking-step-detail li:nth-child(1) {
+        text-align: left; }
+      .track-order .tracking-step-detail li:nth-child(2) {
+        background-position: center 3px; }
+      .track-order .tracking-step-detail li:nth-child(3) {
+        background-position: center 3px; }
+      .track-order .tracking-step-detail li:nth-child(4) {
+        text-align: right;
+        background-position: right 3px; }
+
+.track-pop-cont {
+  margin: 0 0 50px;
+  overflow: hidden; }
+
+.track-pop-left figure {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  float: left;
+  overflow: hidden; }
+  .track-pop-left figure img {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #f8a898; }
+.track-pop-left h3 {
+  overflow: hidden;
+  color: #87483a;
+  font-size: 18px;
+  font-family: 'Exo2Light';
+  float: left;
+  margin: 17px; }
+
+.track-pop-center h4, .track-pop-right h4 {
+  font-size: 16px;
+  color: #8e8e8e;
+  font-family: 'Exo2Light';
+  margin: 0 0 10px; }
+.track-pop-center p, .track-pop-right p {
+  font-size: 16px;
+  padding: 0 0 0 20px;
+  background: url(../images/delivery-nav-icon.png) no-repeat 0 4px; }
+  .track-pop-center p span, .track-pop-right p span {
+    font-size: 18px; }
+
+.track-pop-right p {
+  background: url(../images/ico_clock.png) no-repeat 0 4px; }
+
+@media (max-width: 1400px) {
+  .container {
+    width: 90%; } }
 @media only screen and (max-width: 1250px) {
   .search-btn {
-    margin: 0 150px 0 auto; }
+    margin: 0 135px 0 auto; }
 
   .cake-view-wrap {
     width: 45%; }
@@ -1896,8 +1970,70 @@ td.cake-cont ul {
     transform: scale(2); }
   #showcase .slick-next {
     bottom: 140px; } }
-@media (max-width: 1400px) {
-  .container {
+@media (max-width: 1349px) {
+  .delivery-table thead tr th {
+    font-size: 13px; }
+
+  .pay-options li {
+    margin-right: 15px; }
+    .pay-options li a {
+      font-size: 14px; }
+
+  .radio-custom-label img {
+    margin: 0; }
+
+  .profile-page .text-right a:nth-child(2) {
+    white-space: nowrap; } }
+@media (max-width: 1100px) {
+  .pay-options li {
+    margin-right: 10px; }
+    .pay-options li a {
+      font-size: 13px; }
+
+  .radio-custom-label img {
+    margin: 0 0 0 -4px; }
+
+  .radio-custom + .radio-custom-label:before {
+    margin-right: 7px; }
+
+  .radio-cls:before {
+    margin-right: 8px !important; }
+
+  .debit-banking, .credit-banking {
+    padding: 0; }
+    .debit-banking p input, .credit-banking p input {
+      font-size: 14px; }
+
+  .checkout-details p input {
+    width: 60%; }
+
+  .checkout-details p .cvv {
+    width: 25%;
+    margin-left: 8px; }
+
+  .checkout-details p .exp-date {
+    width: 32%; }
+
+  .cod-details {
+    padding: 0; }
+    .cod-details p input {
+      width: 60%; }
+
+  .cod-buttons a {
+    width: 60%; }
+
+  .otp-buttons a:last-child {
+    width: 60%; } }
+@media (max-width: 1200px) {
+  .profile-page .text-right a:nth-child(1) {
+    margin: 0 15px 0 0; }
+
+  .checkout-img img {
     width: 90%; } }
+@media (max-height: 767px) {
+  .login-user.pop-login-user {
+    padding: 30px; }
+    .login-user.pop-login-user p input {
+      margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */

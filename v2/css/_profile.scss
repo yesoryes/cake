@@ -1,85 +1,81 @@
-.profile-page
-{
-    margin-top: 40px;
-    h1 
-    {
-        color: #454545;
-        padding: 38px 0 25px;
-        font-size: 32px;
+.profile-page {
+  margin: 40px auto;
+  h1 {
+    color: #454545;
+    padding: 0 0 25px;
+    font-size: 32px;
+    line-height: 24px;
+  }
+  .profile-bg {
+    background: #fff;
+    padding: 40px;
+    h3 {
+      color: #87483a;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Exo2Medium';
+      span {
+        font-family: 'Exo2Light';
+        font-weight: normal;
+      }
     }
-    .profile-bg
-    {
-        background: #fff;
-        padding: 0px 40px 40px;
-        h3 
-        { 
-            color: #87483a;
-            font-size: 18px;
-            font-weight: bold;
-            font-family: 'Exo2Medium';
-            span 
-            {
-                font-family: 'Exo2Light';
-                font-weight: normal;
-            }
+  }
+  .text-right {
+    margin: 45px 0 0;
+    a {
+      color: #87483a;
+      font-family: 'Exo2Medium';
+      font-size: 16px;
+
+      &:nth-child(1) {
+        text-decoration: underline !important;
+        margin: 0 30px 0 0;
+      }
+      &:nth-child(2) {
+        background-image: -moz-linear-gradient(0deg, rgb(247, 160, 133) 0%, rgb(245, 130, 113) 47%, rgb(242, 99, 93) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(247, 160, 133) 0%, rgb(245, 130, 113) 47%, rgb(242, 99, 93) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(247, 160, 133) 0%, rgb(245, 130, 113) 47%, rgb(242, 99, 93) 100%);
+        color: #fff;
+        padding: 15px 100px;
+        span {
+          img {
+            padding: 0 15px 0 0;
+          }
         }
+
+      }
     }
-    .text-right 
-    {
-        margin: 45px 0 0;
-        a 
-        {
-            color: #87483a;
-            font-family: 'Exo2Medium';
-            font-size: 16px;
-            
-            &:nth-child(1)
-            {
-                text-decoration: underline !important;
-                margin: 0 30px 0 0;
-            }
-            &:nth-child(2)
-            {
-                background-image: -moz-linear-gradient( 0deg, rgb(247,160,133) 0%, rgb(245,130,113) 47%, rgb(242,99,93) 100%);
-  background-image: -webkit-linear-gradient( 0deg, rgb(247,160,133) 0%, rgb(245,130,113) 47%, rgb(242,99,93) 100%);
-  background-image: -ms-linear-gradient( 0deg, rgb(247,160,133) 0%, rgb(245,130,113) 47%, rgb(242,99,93) 100%);
-                color: #fff;
-                padding: 15px 100px;
-                span 
-                {
-                    img {
-                        padding: 0 15px 0 0;
-                    }
-                }
-                
-            }
-        }
-    }
-    
+  }
+
 }
-.order-details 
-{
-    h2
-    {
-        display: inline-block;
-        font-size: 18px;
-        color: #87483a;
-        vertical-align: middle;
-        margin: 0 0 0 20px;
-        p 
-        {
-           font-weight: bold;
-        }
-        a 
-        {
-            span {
-            color: #f5828a;
-                font-size: 15px;
-                margin: 0 0 0 15px;
-            }
-        }
-    }
+
+.btn-shoping-order {
+  overflow: hidden;
+  a {
+    display: inline-block
+  }
 }
+
+.order-details {
+  h2 {
+    display: inline-block;
+    font-size: 18px;
+    color: #87483a;
+    vertical-align: middle;
+    margin: 0 0 0 20px;
+    p {
+      font-weight: bold;
+    }
+    a {
+      span {
+        color: #f5828a;
+        font-size: 15px;
+        margin: 0 0 0 15px;
+      }
+    }
+  }
+}
+
 .items-table
 {
    width: 100%;
@@ -92,8 +88,9 @@
         th 
         {
             color: #b1b1b1;
-        font-size: 18px;
-        padding-bottom: 15px;
+            font-size: 18px;
+            padding-bottom: 15px;
+            font-family: 'Exo2Light';
             
             &:nth-child(1)
             {
@@ -130,7 +127,6 @@
             {
                 padding: 24px 0;
                 color: #87483a;
-                vertical-align: middle;
                 &:nth-child(6),&:nth-child(5)
                 {
                     cursor: pointer;

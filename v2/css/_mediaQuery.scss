@@ -1,27 +1,132 @@
-@media only screen and (max-width:1250px) {
-    .search-btn {
-        margin: 0 150px 0 auto;
-        //float: right;
-    }
-    .cake-view-wrap {
-        width: 45%;
-    }
-    .cake-text-wrap {
-        width: 55%;
-    }
-    #showcase {
-        .slick-prev {
-            bottom: 220px;
-            left: 40px;
-            @include scale(2);
-        }
-        .slick-next {
-            bottom: 140px;
-        }
-    }
+@media (max-width: 1420px) {
+  .test {
+
+  }
 }
 @media (max-width: 1400px) {
-    .container {
-        width: 90%;
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .search-btn {
+    margin: 0 135px 0 auto;
+    //float: right;
+  }
+  .cake-view-wrap {
+    width: 45%;
+  }
+  .cake-text-wrap {
+    width: 55%;
+  }
+  #showcase {
+    .slick-prev {
+      bottom: 220px;
+      left: 40px;
+      @include scale(2);
+    }
+    .slick-next {
+      bottom: 140px;
+    }
+  }
+}
+
+@media (max-width: 1349px) {
+  .delivery-table thead tr th {
+    font-size: 13px;
+  }
+  .pay-options {
+    li {
+      margin-right: 15px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  .radio-custom-label img {
+    margin: 0;
+  }
+  .profile-page .text-right a:nth-child(2) {
+    white-space: nowrap;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .pay-options {
+    li {
+      margin-right: 10px;
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+  .radio-custom-label img {
+    margin: 0 0 0 -4px;
+  }
+  .radio-custom + .radio-custom-label:before {
+    margin-right: 7px;
+  }
+  .radio-cls {
+    &:before {
+      margin-right: 8px !important;
+    }
+  }
+
+  .debit-banking, .credit-banking {
+    padding: 0;
+    p {
+      input {
+        font-size: 14px;
+      }
+    }
+  }
+  .checkout-details p input {
+    width: 60%;
+  }
+  .checkout-details p .cvv {
+    width: 25%;
+    margin-left: 8px;
+  }
+  .checkout-details p .exp-date {
+    width: 32%;
+  }
+  .cod-details {
+    padding: 0;
+    p {
+      input {
+        width: 60%;
+      }
+    }
+  }
+  .cod-buttons a {
+    width: 60%;
+  }
+  .otp-buttons a:last-child {
+    width: 60%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .profile-page .text-right a:nth-child(1) {
+    margin: 0 15px 0 0;
+    }
+    .checkout-img {
+      img {
+          width: 90%;
+      }
+    }
+}
+@media (max-height: 767px) {
+    .login-user {
+        &.pop-login-user {
+            padding: 30px;
+            p {
+                input {
+                    margin: 0;
+                }
+            }
+        }
     }
 }

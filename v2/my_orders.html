@@ -95,21 +95,39 @@
 <div id="pop-up-1" class="pop-up-display-content">
   <div class="popup-content"> 
     <div class="popup-top">
-      <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
-        <div class="login-user pop-login-user">
-          <h2>Sign in to Your Account</h2>
-          <p><input type="text" placeholder="User Name"></p>
-          <p><input type="password" placeholder="Password"></p>
-          <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
-          <p class="account-help text-center">
-            <a href="#">Forget Password</a>
-            <a id="open-pop-up-2" href="#pop-up-2" class="log-cls">Create New Account</a>
-          </p>
+      <div class="track-order">
+        <div class="row track-pop-cont">
+          <div class="col-md-7 col-lg-7 track-pop-left">
+            <figure>
+              <img src="images/cake/cake2.png">
+            </figure>
+            <h3>Black forest</h3>
+          </div>
+          <div class="col-md-10 col-lg-10 track-pop-center">
+            <h4>Delivery Address</h4>
+            <p>
+              <span>YesOrYes</span><br>
+              6th cross street, Kumarankudil Annex<br>
+              Thoraipakkam<br>
+              Chennai-600097.
+            </p>
+          </div>
+          <div class="col-md-7 col-lg-7 track-pop-right">
+            <h4>Status</h4>
+            <p>Delivered with in 12:45 A.M </p>
+          </div>
         </div>
+        <ul class="tracking-step-detail">
+          <li class="active">Cake ordered</li>
+          <li>Order Packed</li>
+          <li>Dispatch from Bakery</li>
+          <li>Cake Delivered</li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
+
 
 <script src="js/jquery-1.12.3.min.js"></script> 
 <!--Bootstrap Scripts--> 
@@ -123,6 +141,7 @@
  $('#open-pop-up-1').click(function(e) {
         e.preventDefault();
         $('#pop-up-1').popUpWindow({action: "open"});
+        //$('#pop-up-1').removeClass('hidden')
     });
   $('#open-pop-up-2').click(function(e) {
         e.preventDefault();
