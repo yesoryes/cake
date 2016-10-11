@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake | Delivery Address </title>
+
+    <!--Bootstrap Styles-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!--Swiper
+    <link href="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/royalslider.css" rel="stylesheet">
+    -->
+    <!--Custom Styles-->
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+<div id="wrapper" class="wrapperC wrapper-inner">
+    <header>
+        <div class="menu-hanger pull-left" id="nav-icon3"><span></span> <span></span> <span></span> <span></span></div>
+        <div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+        <div class="search-btn">
+            <input type="text" name="" placeholder="What kind of cake you need !">
+            <input type="submit" class="btn-search" name="">
+        </div>
+        <div class="pull-right header-btn">
+            <p class="login-btn"><a href=""></a></p>
+
+            <p class="cart-btn"><a href=""></a></p>
+        </div>
+    </header>
+    <!--aside class="postion-absolute">
+      <ul class="absolute-top-center">
+        <li><a href=""><span><img src="images/ico_menu_lovers.png"></span>Valentine's Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_birthday.png"></span>Birthday's Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_wedding.png"></span>Wedding Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_gift.png"></span>Gift Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_art.png"></span>Art Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_cup.png"></span>Cup Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_child.png"></span>Childrean's Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_designed.png"></span>Design Cake</a></li>
+      </ul>
+    </aside-->
+
+    <div class="container profile-page payment-page padding-zero">
+        <div class="row">
+            <div class="breadcrumb col-md-24 col-lg-24">
+                <div class="col-md-6 col-lg-6 pay-delivery">
+                    <a href="payment_login.html"><img src="images/login-payment-icon.png">LOGIN</a>
+                </div>
+                <div class="col-md-6 col-lg-6 pay-delivery">
+                    <a href="#"><img src="images/delivery-payment-icon.png">DELIVERY ADDRESS</a>
+                </div>
+                <div class="col-md-6 col-lg-6 pay-delivery">
+                    <a href="#"><img src="images/summary-gray.png">ORDER SUMMARY</a>
+                </div>
+                <div class="col-md-6 col-lg-6 pay-delivery">
+                    <a href="#"><img src="images/payment-method-gray.png">PAYMENT METHOD</a>
+                </div>
+            </div>
+            <div class="item col-md-24 col-lg-24 profile-bg">
+                <div class="col-md-12 col-lg-12 text-center delivery-img">
+                    <img src="images/delivery-image.png">
+                </div>
+                <div class="col-md-12 col-lg-12 delivery-details">
+                    <div class="col-md-20 col-md-offset-2 col-lg-15 col-lg-offset-5">
+                        <h3>Address</h3>
+
+                        <p><input type="text" placeholder="Name"></p>
+
+                        <p><input type="text" placeholder="Pincode"></p>
+
+                        <p><input type="text" placeholder="Street"></p>
+
+                        <p><input type="text" placeholder="Landmark"></p>
+
+                        <p><input type="text" placeholder="City"></p>
+
+                        <p><input type="text" placeholder="Phone"></p>
+
+                        <p><input type="text" placeholder="State"></p>
+
+                        <p><a href="payment.html" class="save-addr-hover"><input type="submit" value=""></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-1.12.3.min.js"></script>
+<!--Bootstrap Scripts-->
+<script src="js/bootstrap.min.js"></script>
+<!--Swiper-->
+<!--script src="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/jquery.royalslider.min.js"></script-->
+<script src="js/slick.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(document).ready(function (e) {
+        $('.delete-item').click(function () {
+            $(this).parent().parent().remove();
+        });
+
+        $('.counter-plus').on('click', function () {
+            var $qty = $(this).closest('ul').find('.qty');
+            var currentVal = parseInt($qty.val());
+            if (!isNaN(currentVal)) {
+                $qty.val(currentVal + 1);
+            }
+        });
+        $('.counter-minus').on('click', function () {
+            var $qty = $(this).closest('ul').find('.qty');
+            var currentVal = parseInt($qty.val());
+            if (!isNaN(currentVal) && currentVal > 0) {
+                $qty.val(currentVal - 1);
+            }
+        });
+    });
+</script>
+</body>
+</html>
