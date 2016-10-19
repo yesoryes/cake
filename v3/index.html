@@ -26,16 +26,26 @@
     <header>
         <div class="menu-hanger pull-left" id="nav-icon3"><span></span> <span></span> <span></span> <span></span></div>
         <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-        <div class="search-btn">
+        <div class="search-btn pull-left">
             <input type="text" name="" placeholder="What kind of cake you need !">
             <input type="submit" class="btn-search" name="">
         </div>
         <div class="pull-right header-btn">
-            <p class="login-btn"><a id="open-pop-up-1" href="#pop-up-1"></a></p>
+            <p class="login-btn dropdown">
+                <a id="open-pop-up-login" href="#pop-up-login"></a>
+            </p>
 
             <p class="cart-btn"><a href=""></a></p>
         </div>
+
     </header>
+    <ul class="postion-absolute text-capitalize login-drop">
+        <li><a href="myprofile.html">my profile</a></li>
+        <li><a href="my_orders.html">my orders</a></li>
+        <li><a href="whishlist.html">my wishlist</a></li>
+        <li><a href="#">my wallet</a></li>
+        <li><a href="#">sign out</a></li>
+    </ul>
 
     <aside class="postion-fixed">
         <ul class="absolute-top-center">
@@ -111,7 +121,7 @@
     </div>
 </div>
 
-<div id="pop-up-1" class="pop-up-display-content">
+<div id="pop-up-login" class="pop-up-display-content">
     <div class="popup-content">
         <div class="popup-top">
             <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
@@ -126,14 +136,14 @@
 
                     <p class="account-help text-center">
                         <a href="#">Forget Password</a>
-                        <a id="open-pop-up-2" href="#pop-up-2" class="log-cls">Create New Account</a>
+                        <a id="open-pop-up-signup" href="#pop-up-signup" class="log-cls">Create New Account</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="pop-up-2" class="pop-up-display-content">
+<div id="pop-up-signup" class="pop-up-display-content">
     <div class="popup-content">
         <div class="popup-top">
             <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
@@ -171,10 +181,12 @@
 <!--Swiper-->
 <!--script src="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/jquery.royalslider.min.js"></script-->
 <script src="js/slick.js"></script>
-<script src="js/script.js"></script>
 <script src="js/popupwindow.js"></script>
+<script src="js/script.js"></script>
 <script>
     $(document).ready(function (e) {
+
+
 
         $('#showcase').slick({
             vertical: true,
@@ -185,7 +197,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             responsive: [{
-                breakpoint: 1024,
+                breakpoint: 991,
                 settings: {
                     centerMode: true,
                 }
@@ -239,33 +251,31 @@
             $(".fisrt-bg.slick-active").each(function () {
                 $("#wrapper").css({
                     'background': '#bfc3bf'
-                })
+                });
+                $(".search-btn").css({
+                    'background': 'rgba(191, 195, 191, 0.5)'
+                });
             })
             $(".second-bg.slick-active").each(function () {
                 $("#wrapper").css({
                     'background': '#8ed972'
-                })
+                });
+                $(".search-btn").css({
+                    'background': 'rgba(142, 217, 114, 0.5)'
+                });
             })
             $(".third-bg.slick-active").each(function () {
                 $("#wrapper").css({
                     'background': '#deb5e5'
+                });
+                $(".search-btn").css({
+                    'background': 'rgba(222, 181, 219, .5)'
+
                 })
             })
 
         });
 
-    });
-    $('#open-pop-up-1').click(function (e) {
-        e.preventDefault();
-        $('#pop-up-1').popUpWindow({action: "open"});
-    });
-    $('#open-pop-up-2').click(function (e) {
-        e.preventDefault();
-        $('#pop-up-2').popUpWindow({action: "open"});
-    });
-    $('.sign-cls').click(function () {
-        $('#pop-up-2').parent().parent().parent().css('display', 'none');
-        $('#pop-up-2').parent().parent().parent().prev().css('display', 'none');
     });
 
 </script>

@@ -1,6 +1,7 @@
 .cake-detail-wrap {
   overflow: hidden;
   width: 100%;
+  height: 100%;
 }
 
 .cake-view-wrap {
@@ -88,7 +89,7 @@
   height: 100%;
   overflow: hidden;
   background: #fff;
-  padding: 45px 75px 45px 45px;
+  padding: 45px;
   h1 {
     //color: #f8a898;
     //font-size: $size-28;
@@ -162,6 +163,7 @@
     line-height: 22px;
     color: #8e8e8e;
     font-family: 'OpenSansRegular';
+    padding-right: 15px;
   }
   .pull-left {
     &:nth-child(2) {
@@ -340,6 +342,8 @@
 
 .close-details {
   right: 0;
+  top: 120px !important;
+  @include translate(0, 0);
   a {
     display: block;
     width: 40px;

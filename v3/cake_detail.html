@@ -12,6 +12,7 @@
 <!--Custom Styles-->
 <link href="css/slick-theme.css" rel="stylesheet">
 <link href="css/slick.css" rel="stylesheet">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 
 <style type="text/css">
@@ -21,18 +22,29 @@
 </head>
 <body>
 <div id="wrapper" class="wrapperC wrapper-inner">
-  <header>
-    <div class="menu-hanger pull-left" id="nav-icon3"> <span></span> <span></span> <span></span> <span></span> </div>
-    <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-    <div class="search-btn">
-      <input type="text" name="" placeholder="What kind of cake you need !">
-      <input type="submit" class="btn-search" name="">
-    </div>
-    <div class="pull-right header-btn">
-      <p class="login-btn"><a href=""></a></p>
-      <p class="cart-btn"><a href=""></a></p>
-    </div>
-  </header>
+    <header>
+        <div class="menu-hanger pull-left" id="nav-icon3"><span></span> <span></span> <span></span> <span></span></div>
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="search-btn pull-left">
+            <input type="text" name="" placeholder="What kind of cake you need !">
+            <input type="submit" class="btn-search" name="">
+        </div>
+        <div class="pull-right header-btn">
+            <p class="login-btn dropdown">
+                <a id="open-pop-up-login" href="#pop-up-login"></a>
+            </p>
+
+            <p class="cart-btn"><a href=""></a></p>
+        </div>
+
+    </header>
+    <ul class="postion-absolute text-capitalize login-drop">
+        <li><a href="myprofile.html">my profile</a></li>
+        <li><a href="my_orders.html">my orders</a></li>
+        <li><a href="whishlist.html">my wishlist</a></li>
+        <li><a href="#">my wallet</a></li>
+        <li><a href="#">sign out</a></li>
+    </ul>
   <!--aside class="postion-absolute">
     <ul class="absolute-top-center">
       <li><a href=""><span><img src="images/ico_menu_lovers.png"></span>Valentine's Cake</a></li>
@@ -122,18 +134,18 @@
         <li>></li>
         <li class="active">Black Forrest</li>
       </ul>
-      
-      <div class="cake-title-detail">
-        <h1>Black forest</h1>
-        <div class="review-cake">
-          <img src="images/smiley_4.5.png">
-          <h3>4.5</h3>
-          <span>|</span>
-          <p>125 Reviews</p>
-        </div>
-      </div>
-      
-      <div class="cake-text-details">
+      <div class="cake-detail-contain-height scroll-custom-y">
+          <div class="cake-title-detail">
+            <h1>Black forest</h1>
+            <div class="review-cake">
+              <img src="images/smiley_4.5.png">
+              <h3>4.5</h3>
+              <span>|</span>
+              <p>125 Reviews</p>
+            </div>
+          </div>
+
+          <div class="cake-text-details">
          <div class="cake-cont">
             <h4>Specification</h4>
             <article>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veli.</article>
@@ -180,6 +192,7 @@
              <h5>DELIVERED WITH IN 2 HOURS</h5>            
          </div>
       </div>
+      </div>
 
       <div class="close-details btn-close-details absolute-top-center"><a href="categaries.html"></a></div>
     </div>
@@ -187,13 +200,68 @@
   </div>
 
 </div>
+
+<div id="pop-up-login" class="pop-up-display-content">
+    <div class="popup-content">
+        <div class="popup-top">
+            <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
+                <div class="login-user pop-login-user">
+                    <h2>Sign in to Your Account</h2>
+
+                    <p><input type="text" placeholder="User Name"></p>
+
+                    <p><input type="password" placeholder="Password"></p>
+
+                    <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
+
+                    <p class="account-help text-center">
+                        <a href="#">Forget Password</a>
+                        <a id="open-pop-up-signup" href="#pop-up-signup" class="log-cls">Create New Account</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="pop-up-signup" class="pop-up-display-content">
+    <div class="popup-content">
+        <div class="popup-top">
+            <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
+                <div class="login-user pop-login-user">
+                    <h2>Create Your Account</h2>
+
+                    <p><input type="text" placeholder="Name"></p>
+
+                    <p><input type="email" placeholder="E-Mail Id"></p>
+
+                    <p><input type="number" placeholder="Mobile Number"></p>
+
+                    <p><input type="password" placeholder="Password"></p>
+
+                    <p><input type="password" placeholder="Re-Enter Password"></p>
+
+                    <div><input type="checkbox" class="radio-pop radio-custom" id="radio-popup"><label for="radio-popup"
+                                                                                                       class="radio-custom-label">I
+                        agree Terms and Conditions</label></div>
+                    <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
+
+                    <p class="account-help text-center">
+                        <a href="javascript:;">Already have an Account?</a>
+                        <a href="#" class="sign-cls">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="js/jquery-1.12.3.min.js"></script> 
 <!--Bootstrap Scripts--> 
-<script src="js/bootstrap.min.js"></script> 
-<!--Swiper--> 
-<!--script src="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/jquery.royalslider.min.js"></script--> 
+<script src="js/bootstrap.min.js"></script>
 <script src="js/slick.js"></script>
-<script src="js/script.js"></script> 
+<script src="js/popupwindow.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/script.js"></script>
 <script>
 $(document).ready(function(e) { 
 	$('.cake-large-view').slick({
@@ -233,16 +301,6 @@ $(document).ready(function(e) {
   });
   
   if (window.matchMedia('(max-width: 1400px)').matches) {
-    $('body').css({
-      'overflow' : 'visible'
-    })
-    $(".cake-text-wrap").css({
-      'height' : 'auto',
-    });
-    $("#wrapper").css({
-        'height' : 'auto',
-        'overflow' : 'hidden'
-    });
   }
 });
 </script>

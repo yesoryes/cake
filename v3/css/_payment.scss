@@ -14,7 +14,8 @@ input:focus::-webkit-input-placeholder {
       color: #b1b1b1;
       font-size: 18px;
       padding: 30px 0 15px;
-
+      font-family: 'Exo2Light' !important;
+      font-weight: normal;
       &:nth-child(1) {
         width: 26%;
       }
@@ -80,6 +81,8 @@ td.cake-cont ul {
         color: #454545;
         padding: 20px 0 30px;
         vertical-align: middle;
+        font-family: 'Exo2Light';
+        font-weight: normal;
         span {
           vertical-align: middle;
           img {
@@ -828,17 +831,38 @@ td.cake-cont ul {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.wishlist-table {
+  &.items-table {
+    tbody {
+      tr {
+        td {
+          &:nth-child(4) {
+            font-family: 'OpenSansRegular';
+            //padding: 10px 0;
+            vertical-align: middle;
+            font-size: 12px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.delivery-img {
+  position: relative;
+}
+.add-more-details {
+  display: block;
+  right: -90px;
+  position: absolute;
+  z-index: 1;
+  a {
+    color: #87483a;
+    background: url(../images/ico_add.png) no-repeat left center;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 5px 0 4px 38px;
+  }
+}

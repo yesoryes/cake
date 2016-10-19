@@ -1,17 +1,20 @@
-@media (max-width: 1420px) {
-  .test {
-
+@media (max-width: 1521px) {
+  .search-btn {
+    width: 70%;
   }
 }
 @media (max-width: 1400px) {
   .container {
     width: 90%;
   }
+  .search-btn {
+    width: 65%;
+  }
 }
 @media only screen and (max-width: 1250px) {
   .search-btn {
-    margin: 0 135px 0 auto;
-    //float: right;
+    margin: 0 0px 0 auto;
+    width: 60%;
   }
   .cake-view-wrap {
     width: 45%;
@@ -49,7 +52,9 @@
   .profile-page .text-right a:nth-child(2) {
     white-space: nowrap;
   }
-
+  .add-more-details {
+    right: 0;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -136,8 +141,44 @@
       }
     }
   }
+  .cake-large-view {
+    figure {
+      img {
+        margin: 0 0 0 auto;
+      }
+      figcaption {
+        margin: 50px 0 35px 70px;
+      }
+    }
+  }
+  .btn-group-detail {
+    margin: 0 0 0 auto;
+  }
 }
-@media (max-height: 1050px) {
+@media (max-width: 1160px) {
+  #showcase .slick-list {
+    width: 50%;
+    margin-left: 15%;
+  }
+  #showcase {
+    &.slick-vertical {
+      .slick-slide {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .cake-latest-price {
+    left: 65%;
+  }
+}
+@media (max-width: 1060px) {
+  .search-btn {
+    margin: 0 0 0 -20px;
+  }
+}
+@media (max-width: 1050px) {
   .my-orders {
     tbody {
       td {
@@ -152,15 +193,54 @@
     }
   }
 }
-@media (max-height: 767px) {
-    .login-user {
-        &.pop-login-user {
-            padding: 30px;
-            p {
-                input {
-                    margin: 0;
-                }
-            }
+@media (max-width: 1023px) {
+
+}
+
+@media (max-height: 974px) {
+  .cake-contain-height {
+    height: 770px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .cake-detail-contain-height {
+    //overflow: hidden;
+    //overflow-y: auto;
+    height: 700px;
+  }
+}
+@media (max-height: 768px) {
+  .login-user {
+    &.pop-login-user {
+      padding: 30px;
+      p {
+        .loginhover {
+          &:before {
+            top: 0;
+          }
         }
+        input {
+           margin: 0;
+        }
+      }
+      div {
+        margin: 0 0 10px;
+      }
     }
+  }
+  .cake-contain-height {
+    height: 600px;
+  }
+  .cake-detail-contain-height {
+    height: 580px;
+  }
+}
+
+@media (max-height: 678px) {
+  .cake-contain-height {
+    height: 480px;
+  }
+  .cake-detail-contain-height {
+    height: 510px;
+  }
 }

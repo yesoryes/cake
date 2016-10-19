@@ -97,6 +97,7 @@ body {
 #wrapper {
     background: #fa6670;
     overflow: hidden;
+    @include transition(0.5s all);
 }
 header {
     background: #fff;
@@ -120,9 +121,11 @@ header {
 .search-btn {
     height: 60px;
     background: #f8a898;
-    width: 60%;
     margin: 0 auto;
     position: relative;
+    float: left;
+    width: 73%;
+    @include transition(0.5s all);
     input {
         width: 100%;
         height: 100%;
@@ -204,23 +207,50 @@ header {
 }
 .header-btn {
     position: relative;
-    margin: -35px 20px 0 0;
+    ///margin: -35px 20px 0 0;
+    margin: 0 0 -4px;
 }
 .login-btn {
     //float: left;
     display: inline-block;
-    margin-left: 30px;
+    margin: 0;
     a {
         display: block;
-        width: 20px;
-        height: 20px;
-        background: url(../images/ico_login.png) no-repeat 0 0;
+        width: 52px;
+        height: 60px;
+        background: url(../images/ico_login.png) no-repeat center;
+        &:hover {
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_login.png) no-repeat center;
+
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_login.png) no-repeat center;
+
+            /* IE 10 */
+            background: -ms-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_login.png) no-repeat center;
+
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_login.png) no-repeat center;
+        }
     }
 }
 .cart-btn {
     @extend .login-btn;
     a {
-        background: url(../images/ico_cart.png) no-repeat 0 0;
+        background: url(../images/ico_cart.png) no-repeat center;
+        &:hover {
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_cart.png) no-repeat center;
+
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_cart.png) no-repeat center;
+
+            /* IE 10 */
+            background: -ms-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_cart.png) no-repeat center;
+
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7)),  url(../images/ico_cart.png) no-repeat center;
+        }
     }
 }
 aside {
@@ -232,6 +262,11 @@ aside {
     background: #f5f4f2;
     ul {
         width: 100%;
+        transform: translate(0, -67%) !important;
+        -webkit-transform: translate(0, -67%) !important;
+        -moz-transform: translate(0, -67%) !important;
+        -ms-transform: translate(0, -67%) !important;
+        -o-transform: translate(0, -67%) !important;
         li {
             a {
                 display: block;
@@ -399,7 +434,7 @@ aside {
 .round-wrap2 {
     position: absolute;
     right: -60px;
-    bottom: -150px;
+    bottom: -110px;
     .cake-details {
         margin: -130px 0 0 0;
         right: 260px;
@@ -566,6 +601,64 @@ aside {
 }
 .btn-close-details {
     position: fixed !important;
+}
+.login-drop {
+    background: #fff;
+    width: 170px;
+    font-family: 'Exo2Light';
+    top: 60px !important;
+    left: initial !important;
+    right: 0;
+    z-index: 10001;
+    display: none;
+    li {
+        border-bottom: 1px solid rgba(248, 168, 152, 0.27);
+        &:hover {
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7));
+
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7));
+
+            /* IE 10 */
+            background: -ms-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7));
+
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(left, rgba(247, 160, 133, 0.7), rgba(242, 99, 93, 0.7));
+        }
+        a {
+            display: block;
+            padding: 10px;
+            color: #454545;
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+        &:nth-child(1) {
+            a {
+                background-image: url("../images/ico_drop_profile.png");
+            }
+        }
+        &:nth-child(2) {
+            a {
+                background-image: url("../images/ico_drop_order.png");
+            }
+        }
+        &:nth-child(3) {
+            a {
+                background-image: url("../images/ico_drop_wishlist.png");
+            }
+        }
+        &:nth-child(4) {
+            a {
+                background-image: url("../images/ico_drop_wallet.png");
+            }
+        }
+        &:nth-child(5) {
+            a {
+                background-image: url("../images/ico_drop_signout.png");
+            }
+        }
+    }
 }
 
 @import "inner";

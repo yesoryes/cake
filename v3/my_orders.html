@@ -1,157 +1,215 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cake | My Orders</title>
+    <title>Cake | My Orders</title>
 
-<!--Bootstrap Styles-->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-<!--Swiper
-<link href="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/royalslider.css" rel="stylesheet">
--->
-<!--Custom Styles-->
-<link href="css/slick-theme.css" rel="stylesheet">
-<link href="css/slick.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-
-<style type="text/css">
-
-</style>
-
+    <!--Bootstrap Styles-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!--Custom Styles-->
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <div id="wrapper" class="wrapperC wrapper-inner">
-  <header>
-    <div class="menu-hanger pull-left" id="nav-icon3"> <span></span> <span></span> <span></span> <span></span> </div>
-    <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-    <div class="search-btn">
-      <input type="text" name="" placeholder="What kind of cake you need !">
-      <input type="submit" class="btn-search" name="">
-    </div>
-    <div class="pull-right header-btn">
-      <p class="login-btn"><a href=""></a></p>
-      <p class="cart-btn"><a href=""></a></p>
-    </div>
-  </header>
-  <!--aside class="postion-absolute">
-    <ul class="absolute-top-center">
-      <li><a href=""><span><img src="images/ico_menu_lovers.png"></span>Valentine's Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_birthday.png"></span>Birthday's Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_wedding.png"></span>Wedding Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_gift.png"></span>Gift Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_art.png"></span>Art Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_cup.png"></span>Cup Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_child.png"></span>Childrean's Cake</a></li>
-      <li><a href=""><span><img src="images/ico_menu_designed.png"></span>Design Cake</a></li>
-    </ul>
-  </aside-->
-
-  <div class="container profile-page padding-zero">
-    <div class="row profile-bg">
-    		<h1>My Orders</h1>
-        <div class="items col-lg-24">
-          <table class="items-table my-orders">
-            <thead>
-              <tr>
-                <th>Order Details</th>
-                <th>Rate</th>
-                <th>Flavours</th>
-                <th>Description</th>
-                <th class="text-center">Status</th>
-                <th class="text-center">Track</th>
-              </tr>
-              </thead>
-              <tbody class="body-items">
-                <tr>
-                  <td class="order-details">
-                    <img src="images/items-cake1.jpg">
-                    <h2>
-                      <p>Black Forest</p>
-                      <a href="#">
-                        <img src="images/smiley_3.5.png">
-                        <span>3.5</span>
-                      </a>
-                    </h2>
-                  </td>
-                  <td> &#x20B9; 2750 </td>
-                  <td>Non-Veg</td>
-                  <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem</td>
-                  <td class="text-center">Packed</td>
-                  <td class="text-center"><span><a href="" id="open-pop-up-1" href="#pop-up-1">track order</a></span></td>
-                </tr>
-            </tbody>
-          </table>
-        <h3 class="text-right"><span>Total Amount</span>  &#x20B9;  10750</h3>
-        <div class="text-right">
-        <a href="categaries.html">Continue Shopping</a>
-        <a href="payment_login.html"><span><img src="images/cart-icon.png"></span>PLACE ORDER</a>
+    <header>
+        <div class="menu-hanger pull-left" id="nav-icon3"><span></span> <span></span> <span></span> <span></span></div>
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="search-btn pull-left">
+            <input type="text" name="" placeholder="What kind of cake you need !">
+            <input type="submit" class="btn-search" name="">
         </div>
-        </div>
-    </div>
-  </div>
-
-</div>
-
-<div id="pop-up-1" class="pop-up-display-content">
-  <div class="popup-content"> 
-    <div class="popup-top">
-      <div class="track-order">
-        <div class="row track-pop-cont">
-          <div class="col-md-7 col-lg-7 track-pop-left">
-            <figure>
-              <img src="images/cake/cake2.png">
-            </figure>
-            <h3>Black forest</h3>
-          </div>
-          <div class="col-md-10 col-lg-10 track-pop-center">
-            <h4>Delivery Address</h4>
-            <p>
-              <span>YesOrYes</span><br>
-              6th cross street, Kumarankudil Annex<br>
-              Thoraipakkam<br>
-              Chennai-600097.
+        <div class="pull-right header-btn">
+            <p class="login-btn dropdown">
+                <a id="open-pop-up-login" href="#pop-up-login"></a>
             </p>
-          </div>
-          <div class="col-md-7 col-lg-7 track-pop-right">
-            <h4>Status</h4>
-            <p>Delivered with in 12:45 A.M </p>
-          </div>
+
+            <p class="cart-btn"><a href=""></a></p>
         </div>
-        <ul class="tracking-step-detail">
-          <li class="active">Cake ordered</li>
-          <li>Order Packed</li>
-          <li>Dispatch from Bakery</li>
-          <li>Cake Delivered</li>
-        </ul>
-      </div>
+
+    </header>
+
+    <ul class="postion-absolute text-capitalize login-drop">
+        <li><a href="myprofile.html">my profile</a></li>
+        <li><a href="my_orders.html">my orders</a></li>
+        <li><a href="whishlist.html">my wishlist</a></li>
+        <li><a href="#">my wallet</a></li>
+        <li><a href="#">sign out</a></li>
+    </ul>
+
+    <!--aside class="postion-absolute">
+      <ul class="absolute-top-center">
+        <li><a href=""><span><img src="images/ico_menu_lovers.png"></span>Valentine's Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_birthday.png"></span>Birthday's Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_wedding.png"></span>Wedding Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_gift.png"></span>Gift Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_art.png"></span>Art Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_cup.png"></span>Cup Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_child.png"></span>Childrean's Cake</a></li>
+        <li><a href=""><span><img src="images/ico_menu_designed.png"></span>Design Cake</a></li>
+      </ul>
+    </aside-->
+
+    <div class="container profile-page padding-zero cake-contain-height scroll-custom-y">
+        <div class="row profile-bg">
+            <h1>My Orders</h1>
+
+            <div class="items col-lg-24">
+                <table class="items-table my-orders">
+                    <thead>
+                    <tr>
+                        <th>Order Details</th>
+                        <th>Rate</th>
+                        <th>Flavours</th>
+                        <th>Description</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Track</th>
+                    </tr>
+                    </thead>
+                    <tbody class="body-items">
+                    <tr>
+                        <td class="order-details">
+                            <img src="images/items-cake1.jpg">
+
+                            <h2>
+                                <p>Black Forest</p>
+                            </h2>
+                        </td>
+                        <td> &#x20B9; 2750</td>
+                        <td>Non-Veg</td>
+                        <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem</td>
+                        <td class="text-center">Packed</td>
+                        <td class="text-center"><span><a href="" id="open-pop-up-track1" href="#pop-up-track1">track
+                            order</a></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--h3 class="total-amount-cont text-right"><span>Total Amount</span>  &#x20B9;  10750</h3>
+                <div class="text-right">
+                    <a href="categaries.html">Continue Shopping</a>
+                    <a href="payment_login.html"><span><img src="images/cart-icon.png"></span>PLACE ORDER</a>
+                </div-->
+            </div>
+        </div>
     </div>
-  </div>
+
 </div>
 
+<div id="pop-up-track1" class="pop-up-display-content">
+    <div class="popup-content">
+        <div class="popup-top">
+            <div class="track-order">
+                <div class="row track-pop-cont">
+                    <div class="col-md-7 col-lg-7 track-pop-left">
+                        <figure>
+                            <img src="images/cake/cake2.png">
+                        </figure>
+                        <h3>Black forest</h3>
+                    </div>
+                    <div class="col-md-10 col-lg-10 track-pop-center">
+                        <h4>Delivery Address</h4>
 
-<script src="js/jquery-1.12.3.min.js"></script> 
-<!--Bootstrap Scripts--> 
-<script src="js/bootstrap.min.js"></script> 
-<!--Swiper--> 
-<!--script src="http://www.soqueijo.com.br/Royal%20Slider/new-rs-9.5.4/templates/assets/royalslider/jquery.royalslider.min.js"></script--> 
-<script src="js/slick.js"></script>
+                        <p>
+                            <span>YesOrYes</span><br>
+                            6th cross street, Kumarankudil Annex<br>
+                            Thoraipakkam<br>
+                            Chennai-600097.
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-lg-7 track-pop-right">
+                        <h4>Status</h4>
+
+                        <p>Delivered with in 12:45 A.M </p>
+                    </div>
+                </div>
+                <ul class="tracking-step-detail">
+                    <li class="active">Cake ordered</li>
+                    <li>Order Packed</li>
+                    <li>Dispatch from Bakery</li>
+                    <li>Cake Delivered</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop-up-login" class="pop-up-display-content">
+    <div class="popup-content">
+        <div class="popup-top">
+            <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
+                <div class="login-user pop-login-user">
+                    <h2>Sign in to Your Account</h2>
+
+                    <p><input type="text" placeholder="User Name"></p>
+
+                    <p><input type="password" placeholder="Password"></p>
+
+                    <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
+
+                    <p class="account-help text-center">
+                        <a href="#">Forget Password</a>
+                        <a id="open-pop-up-signup" href="#pop-up-signup" class="log-cls">Create New Account</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="pop-up-signup" class="pop-up-display-content">
+    <div class="popup-content">
+        <div class="popup-top">
+            <div class="col-lg-14 col-md-14 col-sm-14 login-pop">
+                <div class="login-user pop-login-user">
+                    <h2>Create Your Account</h2>
+
+                    <p><input type="text" placeholder="Name"></p>
+
+                    <p><input type="email" placeholder="E-Mail Id"></p>
+
+                    <p><input type="number" placeholder="Mobile Number"></p>
+
+                    <p><input type="password" placeholder="Password"></p>
+
+                    <p><input type="password" placeholder="Re-Enter Password"></p>
+
+                    <div><input type="checkbox" class="radio-pop radio-custom" id="radio-popup"><label for="radio-popup"
+                                                                                                       class="radio-custom-label">I
+                        agree Terms and Conditions</label></div>
+                    <p><a href="payment_delivery_address.html" class="loginhover"><input type="submit" value=""></a></p>
+
+                    <p class="account-help text-center">
+                        <a href="javascript:;">Already have an Account?</a>
+                        <a href="#" class="sign-cls">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.12.3.min.js"></script>
+<!--Bootstrap Scripts-->
+<script src="js/bootstrap.min.js"></script>
 <script src="js/popupwindow.js"></script>
-<script src="js/script.js"></script> 
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/script.js"></script>
 <script>
- $('#open-pop-up-1').click(function(e) {
+    $('#open-pop-up-track1').click(function (e) {
         e.preventDefault();
-        $('#pop-up-1').popUpWindow({action: "open"});
+        $('#pop-up-track1').popUpWindow({action: "open"});
         //$('#pop-up-1').removeClass('hidden')
     });
-  $('#open-pop-up-2').click(function(e) {
+    $('#open-pop-up-2').click(function (e) {
         e.preventDefault();
         $('#pop-up-2').popUpWindow({action: "open"});
     });
-  $('.sign-cls').click(function(){
-    $('#pop-up-2').parent().parent().parent().css('display', 'none');
-    $('#pop-up-2').parent().parent().parent().prev().css('display', 'none');
+    $('.sign-cls').click(function () {
+        $('#pop-up-2').parent().parent().parent().css('display', 'none');
+        $('#pop-up-2').parent().parent().parent().prev().css('display', 'none');
     });
-  
+
 </script>
 </body>
 </html>

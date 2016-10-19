@@ -66,6 +66,24 @@ button, input, textarea {
   margin: 20px 0;
 }
 
+.cake-detail-contain-height {
+  position: relative;
+  overflow: auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cake-contain-height {
+  overflow: auto;
+  position: relative;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /*Swiper*/
 .swiper-button-prev, .swiper-button-next {
   top: 900px;
@@ -93,7 +111,7 @@ button, input, textarea {
   &.slick-vertical {
     .slick-slide {
       //margin: 20px 0 20px 200px;
-      margin: 20px 0;
+      margin: 30px 0;
       img {
         -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
         filter: blur(5px);
@@ -294,5 +312,5 @@ button, input, textarea {
     box-shadow: 0 0 40px 300px rgba(0, 0, 0, 0.1),
     0 0 10px 310px transparent,
     0 0 30px 320px rgba(0, 0, 0, 0.1)
-    }
+  }
 }
